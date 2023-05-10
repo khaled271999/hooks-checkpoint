@@ -5,10 +5,11 @@ import '../App.css'
 
 const MovieList = ({movies , inputSearch}) => {
   return (
-    <div className='liststyle'>
+    <div className='moviestyle'>
 
-        {movies
-         .filter(movie => movie.title.toUpperCase().includes(inputSearch.toUpperCase()))
+        {
+        movies.filter(movie => movie.title.toUpperCase().includes(inputSearch.toUpperCase().trim()) || 
+        movie.description.toUpperCase().includes(inputSearch.toUpperCase().trim()  ))
         .map( movie =>
       <MovieCard  movie ={movie} key={movie.id}/>
         )}

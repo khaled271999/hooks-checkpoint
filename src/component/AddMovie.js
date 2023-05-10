@@ -7,6 +7,7 @@ const AddMovie = ({add}) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+   
 
 
     // initialisation 
@@ -40,6 +41,7 @@ const AddMovie = ({add}) => {
     const handleAdd = () => {
         let newMovie = { title , description , rate , posterUrl}
         add(newMovie)
+        handleClose()
     }
     
   return (

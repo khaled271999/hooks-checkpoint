@@ -4,6 +4,7 @@ import AddMovie from './component/AddMovie';
 import { moviesData } from './component/MovieData';
 import FilterMovie from './component/FilterMovie';
 import MovieList from './component/MovieList';
+import Navigation from './component/Navigation';
 
 function App() {
   const [movies , setMovies] =useState(moviesData)
@@ -17,6 +18,7 @@ function App() {
   
   return (
     <div className="App">
+      <Navigation/>
       <FilterMovie inputSearch = {inputSearch} setInputSearch ={setInputSearch}/>
     <MovieList movies={movies} inputSearch ={inputSearch} />
     <AddMovie add={add}/>
